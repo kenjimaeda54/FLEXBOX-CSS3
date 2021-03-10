@@ -1,0 +1,90 @@
+/*Aqui e flew grow */
+body {
+  background-color: #ddd;
+}
+
+.container {
+  background-color: #fff;
+  width: 1000px;
+  display: flex; /* display flex e a div principal */
+}
+
+.box {
+  flex-basis: 200px;
+  height: 200px; /*Aqui você determina o tamanho do tamanho da div filho */
+  background-color: red;
+  flex-grow: 1;
+}
+.first {
+  background-color: green;
+  flex-grow: 1;
+}
+.second {
+  background-color: darkorange;
+  flex-grow: 2; /*Com flex grow as 3 div vão preencher a div filho,flew-gow 1 sinfica que esta div vai ser maior que as outras */
+} /*Com maior  flew grow maior prioridade,flew grow 3 maior que flex grow 1 */
+.third {
+  background-color: brown;
+}
+
+/* flex-shrink: */
+.container1 {
+  background-color: #fff;
+  margin-top: 20px;
+  width: 100%;
+  display: flex; /* display flex e a div principal */
+}
+
+.box1 {
+  flex-basis: 500px; /*Aqui você determina o tamanho do tamanho da div filho */
+  flex-grow: 1;
+  height: 100px;
+  background-color: red;
+}
+.first1 {
+  background-color: green;
+  flex-shrink: 1;
+}
+.second1 {
+  background-color: darkorange;
+  flex-shrink: 1;
+}
+.third1 {
+  background-color: brown;
+  flex-shrink: 2; /*vai reduzir 2 vezes em relação aos outros */
+}
+
+/* flex-direction e aplicado apenas no elemento pai nessa caso nosso e o 
+  container  */
+
+/* Order */
+
+.container2 {
+  background-color: #fff;
+  margin-top: 20px;
+  width: 100%;
+  display: flex; /* display flex e a div principal */
+}
+
+.box2 {
+  flex-basis: 500px; /*Aqui você determina o tamanho do tamanho da div filho */
+  flex-grow: 1;
+  height: 100px;
+  background-color: red;
+}
+.first2 {
+  background-color: green;
+  order: 2;
+}
+.second2 {
+  background-color: darkorange;
+  order: 1;
+}
+.third2 {
+  background-color: brown;
+  order: 3;
+}
+/*Com order consigo mudar as posições das div sem alterar o html */
+/*Justify-content: tem que ficar no elemento pai ou seja aonde fica o display flex; */
+/*Align-itens mesmo principio de justify-content mas na linha vertical tambem fica elemento pai */
+/*Align-self tem que ficar na div que deseja alterar ,ela altera apenas um conteudo e na linha vertical */
